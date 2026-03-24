@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carl Protocol — Système d'acquisition automatisé pour coachs et consultants</title>
+  <meta name="description" content="Le Carl Protocol installe un système d'acquisition automatisé pour les coachs et consultants qui font 3k+/mois. Livré en 14 jours." />
+  <meta property="og:title" content="Carl Protocol — Leads prévisibles sans créer de contenu" />
+  <meta property="og:description" content="Système d'acquisition automatisé pour coachs et consultants. Livré en 14 jours ou on bosse gratis." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary-container": "#2b2a29",
+            "inverse-surface": "#30312c",
+            "surface": "#fbf9f1",
+            "tertiary": "#5f5e5d",
+            "surface-container": "#f0eee6",
+            "secondary": "#715c15",
+            "primary-fixed": "#ffdbd0",
+            "outline": "#88726c",
+            "error-container": "#ffdad6",
+            "tertiary-fixed-dim": "#c9c6c4",
+            "primary-container": "#d97757",
+            "error": "#ba1a1a",
+            "surface-bright": "#fbf9f1",
+            "on-surface": "#1b1c17",
+            "primary-fixed-dim": "#ffb59e",
+            "on-tertiary-fixed": "#1c1c1a",
+            "on-secondary-fixed": "#241a00",
+            "surface-dim": "#dcdad2",
+            "outline-variant": "#dbc1b9",
+            "secondary-fixed-dim": "#e0c473",
+            "inverse-primary": "#ffb59e",
+            "on-secondary": "#ffffff",
+            "surface-container-low": "#f6f4ec",
+            "on-primary-container": "#541400",
+            "on-primary": "#ffffff",
+            "on-background": "#1b1c17",
+            "surface-container-high": "#eae8e0",
+            "on-error": "#ffffff",
+            "on-error-container": "#93000a",
+            "on-primary-fixed": "#390b00",
+            "secondary-fixed": "#fee08c",
+            "primary": "#99462a",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed-variant": "#474745",
+            "secondary-container": "#fee08c",
+            "surface-container-highest": "#e4e2db",
+            "tertiary-fixed": "#e5e2e0",
+            "on-secondary-container": "#78621b",
+            "on-primary-fixed-variant": "#7a2f15",
+            "on-surface-variant": "#55433d",
+            "surface-tint": "#99462a",
+            "inverse-on-surface": "#f3f1e9",
+            "background": "#fbf9f1",
+            "surface-variant": "#e4e2db",
+            "tertiary-container": "#93918f",
+            "on-secondary-fixed-variant": "#574500",
+            "on-tertiary": "#ffffff"
+          },
+          fontFamily: {
+            "headline": ["Newsreader", "serif"],
+            "body": ["Inter", "sans-serif"],
+            "label": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+      background-color: #FAF9F5;
+      color: #1b1c17;
+    }
+    details summary::-webkit-details-marker { display: none; }
+    details summary { list-style: none; }
+  </style>
+</head>
+<body class="font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+
+<!-- ============================================ -->
+<!-- 1. NAV STICKY                                -->
+<!-- ============================================ -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-[#FAF9F5]/95 backdrop-blur-sm">
+  <div class="flex justify-between items-center w-full px-6 md:px-8 py-5 max-w-7xl mx-auto">
+    <div class="text-xl font-headline italic text-stone-900">Carl Protocol</div>
+    <div class="hidden md:flex items-center gap-10">
+      <a class="text-stone-600 font-body text-sm hover:text-[#D97757] transition-colors duration-300" href="#approche">Approche</a>
+      <a class="text-stone-600 font-body text-sm hover:text-[#D97757] transition-colors duration-300" href="#processus">Processus</a>
+      <a class="text-stone-600 font-body text-sm hover:text-[#D97757] transition-colors duration-300" href="#tarifs">Tarifs</a>
+      <a class="text-stone-600 font-body text-sm hover:text-[#D97757] transition-colors duration-300" href="#faq">FAQ</a>
+    </div>
+    <a href="https://tally.so/r/vG2KgA" target="_blank" rel="noopener"
+       class="bg-primary text-on-primary px-5 md:px-6 py-2.5 text-sm font-medium rounded-lg hover:opacity-80 transition-all">
+      Candidater
+    </a>
+  </div>
+</nav>
+
+<!-- ============================================ -->
+<!-- 2. HERO                                      -->
+<!-- ============================================ -->
+<main>
+<section class="relative pt-36 pb-16 md:pt-48 md:pb-28 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <!-- Hero Content -->
+    <div class="lg:col-span-7 flex flex-col items-start">
+      <div class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full mb-8">
+        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+        <span class="text-[10px] md:text-xs font-label uppercase tracking-widest font-bold">Garantie Système Actif : livré en 14 jours ou on bosse gratis</span>
+      </div>
+      <h1 class="font-headline text-4xl md:text-6xl lg:text-7xl text-on-surface leading-[1.08] tracking-tight mb-8">
+        Génère des leads chaque semaine. <span class="italic font-light opacity-80">Sans créer une seule ligne de contenu.</span>
+      </h1>
+      <p class="font-body text-lg md:text-xl text-on-surface-variant leading-relaxed max-w-2xl mb-10">
+        Le Carl Protocol installe un système d'acquisition automatisé pour les coachs et consultants qui font 3k+/mois. Livré en 14 jours.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+        <a href="https://tally.so/r/vG2KgA" target="_blank" rel="noopener"
+           class="bg-primary text-on-primary px-8 py-4 text-lg font-medium rounded-lg hover:opacity-90 transition-all flex items-center justify-center gap-2">
+          Candidater (3 places/mois)
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+        <a href="#processus"
+           class="bg-surface-container-highest text-on-surface px-8 py-4 text-lg font-medium rounded-lg hover:bg-surface-container-high transition-all flex items-center justify-center gap-2">
+          Voir comment ça marche
+        </a>
+      </div>
+      <!-- Proof points -->
+      <div class="mt-12 flex flex-wrap gap-x-10 gap-y-4 opacity-60">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary text-lg">done_all</span>
+          <span class="text-xs font-label uppercase tracking-widest">Zéro contenu à créer</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary text-lg">done_all</span>
+          <span class="text-xs font-label uppercase tracking-widest">100% Automatisé</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary text-lg">done_all</span>
+          <span class="text-xs font-label uppercase tracking-widest">ROI Garanti</span>
+        </div>
+      </div>
+    </div>
+    <!-- Bento Visual -->
+    <div class="hidden lg:block lg:col-span-5 relative">
+      <div class="grid grid-cols-2 gap-4 h-[480px]">
+        <div class="col-span-1 row-span-2 bg-surface-container-low rounded-xl p-6 flex flex-col justify-end">
+          <div class="mb-4">
+            <span class="material-symbols-outlined text-4xl text-primary mb-4" style="font-variation-settings: 'FILL' 1;">insights</span>
+            <div class="h-2 w-16 bg-primary rounded-sm mb-2"></div>
+            <div class="h-2 w-8 bg-outline-variant rounded-sm"></div>
+          </div>
+          <p class="text-stone-900 font-headline text-xl italic leading-tight">Optimisation continue des flux.</p>
+        </div>
+        <div class="col-span-1 bg-surface-container-lowest rounded-xl p-6 flex flex-col justify-between">
+          <div class="flex justify-between items-start">
+            <span class="text-xs font-label uppercase tracking-widest opacity-60">Automation</span>
+            <div class="w-2 h-2 rounded-full bg-[#D97757]"></div>
+          </div>
+          <div class="text-3xl font-headline text-stone-900">24/7</div>
+          <p class="text-xs text-stone-500 font-body">Système actif en permanence.</p>
+        </div>
+        <div class="col-span-1 bg-surface-container-high rounded-xl p-6 flex items-end">
+          <p class="text-xs font-label uppercase tracking-tighter text-stone-700">Carl Protocol v2.0</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- 3. BARRE DE PREUVE                           -->
+<!-- ============================================ -->
+<section class="bg-surface-container-low py-14">
+  <div class="max-w-7xl mx-auto px-6 md:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
+    <p class="font-headline text-xl md:text-2xl text-on-surface italic leading-snug max-w-lg text-center md:text-left">
+      Mon propre système publie du contenu chaque semaine sur @carlprotocol. Zéro intervention manuelle.
+    </p>
+    <div class="flex flex-wrap gap-8 items-center justify-center">
+      <div class="text-center">
+        <div class="text-3xl font-headline text-primary">5+</div>
+        <div class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">posts/semaine</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-headline text-primary">24/7</div>
+        <div class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">uptime système</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-headline text-primary">5 min</div>
+        <div class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">par jour max</div>
+      </div>
+      <a href="https://www.threads.net/@carlprotocol" target="_blank" rel="noopener"
+         class="flex items-center gap-2 text-primary font-medium hover:opacity-80 transition-all text-sm">
+        <span class="material-symbols-outlined text-base">alternate_email</span>
+        Voir @carlprotocol
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- 4. PAIN POINTS                               -->
+<!-- ============================================ -->
+<section id="approche" class="max-w-7xl mx-auto px-6 md:px-8 py-24">
+  <div class="max-w-2xl mb-16">
+    <span class="font-label uppercase tracking-widest text-xs text-primary mb-6 block font-bold">Le diagnostic</span>
+    <h2 class="font-headline text-4xl md:text-6xl text-on-surface leading-tight mb-8">Tu reconnais ça ?</h2>
+    <p class="font-body text-lg text-on-surface-variant leading-relaxed opacity-80">
+      La croissance ne devrait pas être une corvée quotidienne. Si ton système repose sur l'effort pur plutôt que sur des fondations solides, tu ne possèdes pas un business -- tu possèdes un emploi à plein temps.
+    </p>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <!-- Card 1 -->
+    <div class="group bg-surface-container-low p-8 md:p-10 flex flex-col justify-between min-h-[280px] transition-all duration-500 hover:bg-surface-container-lowest border-l-2 border-[#D97757]/20 hover:border-[#D97757]">
+      <div class="mb-10">
+        <span class="material-symbols-outlined text-primary text-3xl">schedule</span>
+      </div>
+      <p class="font-body text-lg md:text-xl text-on-surface leading-snug">
+        Tu passes <span class="text-primary font-medium">5-10h par semaine</span> à créer du contenu. Temps que tu ne passes pas avec tes clients.
+      </p>
+    </div>
+    <!-- Card 2 -->
+    <div class="group bg-surface-container-low p-8 md:p-10 flex flex-col justify-between min-h-[280px] transition-all duration-500 hover:bg-surface-container-lowest border-l-2 border-[#D97757]/20 hover:border-[#D97757]">
+      <div class="mb-10">
+        <span class="material-symbols-outlined text-primary text-3xl">sync_alt</span>
+      </div>
+      <p class="font-body text-lg md:text-xl text-on-surface leading-snug">
+        Tu postes quand tu peux, pas quand il faut. <span class="text-primary font-medium">L'algorithme t'oublie</span>.
+      </p>
+    </div>
+    <!-- Card 3 -->
+    <div class="group bg-surface-container-low p-8 md:p-10 flex flex-col justify-between min-h-[280px] transition-all duration-500 hover:bg-surface-container-lowest border-l-2 border-[#D97757]/20 hover:border-[#D97757]">
+      <div class="mb-10">
+        <span class="material-symbols-outlined text-primary text-3xl">settings_input_component</span>
+      </div>
+      <p class="font-body text-lg md:text-xl text-on-surface leading-snug">
+        Ton acquisition dépend de ta discipline. <span class="text-primary font-medium">Pas de système</span>, pas de prévisibilité.
+      </p>
+    </div>
+    <!-- Card 4 -->
+    <div class="group bg-surface-container-low p-8 md:p-10 flex flex-col justify-between min-h-[280px] transition-all duration-500 hover:bg-surface-container-lowest border-l-2 border-[#D97757]/20 hover:border-[#D97757]">
+      <div class="mb-10">
+        <span class="material-symbols-outlined text-primary text-3xl">robot_2</span>
+      </div>
+      <p class="font-body text-lg md:text-xl text-on-surface leading-snug">
+        Tu as testé ChatGPT. Ça sonne faux. <span class="text-primary font-medium">Ton audience le sent</span>.
+      </p>
+    </div>
+  </div>
+  <!-- Transition -->
+  <div class="mt-16 flex flex-col md:flex-row items-center justify-between border-t border-outline-variant/10 pt-10">
+    <p class="font-body text-on-surface-variant italic mb-6 md:mb-0">Il est temps d'automatiser l'exceptionnel.</p>
+    <a href="#processus" class="flex items-center gap-2 group text-primary font-medium">
+      Découvrir le protocole
+      <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+    </a>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- 5. AVANT / APRÈS                             -->
+<!-- ============================================ -->
+<section class="bg-surface-container-low py-24">
+  <div class="max-w-7xl mx-auto px-6 md:px-8">
+    <div class="mb-16 max-w-xl">
+      <span class="font-label uppercase tracking-widest text-xs text-primary font-bold mb-4 block">La transformation</span>
+      <h2 class="font-headline text-4xl md:text-5xl text-on-surface">Avant le protocole. Après le protocole.</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- AVANT -->
+      <div class="bg-surface-container-highest p-8 md:p-10">
+        <h3 class="font-label uppercase tracking-widest text-sm text-on-surface-variant mb-8">Avant</h3>
+        <div class="space-y-5">
+          <div class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-error text-xl mt-0.5">close</span>
+            <p class="text-on-surface">10h/semaine à créer du contenu</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-error text-xl mt-0.5">close</span>
+            <p class="text-on-surface">Leads aléatoires, zéro prévisibilité</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-error text-xl mt-0.5">close</span>
+            <p class="text-on-surface">Acquisition dépend de ta discipline</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-error text-xl mt-0.5">close</span>
+            <p class="text-on-surface">ChatGPT générique, ton audience le sent</p>
+          </div>
+        </div>
+      </div>
+      <!-- APRÈS -->
+      <div class="bg-surface-container-lowest p-8 md:p-10 border-l-2 border-primary">
+        <h3 class="font-label uppercase tracking-widest text-sm text-primary mb-8">Après</h3>
+        <div class="space-y-5">
+          <div class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span>
+            <p class="text-on-surface">5 min/jour pour valider, c'est tout</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span>
+            <p class="text-on-surface">Pipeline leads prévisible et mesurable</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span>
+            <p class="text-on-surface">Système autonome 24/7, même quand tu dors</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span>
+            <p class="text-on-surface">Contenu calibré sur ta voix, pas un template</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- 6. PROCESSUS                                 -->
+<!-- ============================================ -->
+<section id="processus" class="py-24 px-6 md:px-8 max-w-7xl mx-auto">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end mb-16">
+    <div class="lg:col-span-8">
+      <span class="font-label uppercase tracking-widest text-xs text-primary-container mb-4 block font-bold">La Méthode Pilote Automatique</span>
+      <h2 class="font-headline text-4xl md:text-6xl text-on-surface leading-tight tracking-tight">
+        5 étapes. 14 jours.<br/><span class="italic font-light">Ton système tourne.</span>
+      </h2>
+    </div>
+    <div class="lg:col-span-4 pb-2">
+      <p class="text-lg text-on-surface-variant leading-relaxed">
+        Une transition fluide du chaos manuel à la précision algorithmique. Nous construisons votre infrastructure de croissance pendant que vous dirigez.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="bg-surface-container-low py-20">
+  <div class="max-w-7xl mx-auto px-6 md:px-8">
+    <!-- Step 1 -->
+    <div class="group relative grid grid-cols-1 lg:grid-cols-12 py-12 md:py-16 border-t border-outline-variant/15">
+      <div class="lg:col-span-2 mb-4 lg:mb-0">
+        <span class="font-headline text-6xl md:text-8xl text-primary-container/20 group-hover:text-primary-container transition-colors duration-500 italic">01</span>
+      </div>
+      <div class="lg:col-span-4 flex flex-col justify-center mb-4 lg:mb-0">
+        <h3 class="font-label uppercase tracking-widest text-sm text-primary mb-2">LE DIAGNOSTIC</h3>
+        <h4 class="font-headline text-2xl md:text-3xl text-on-surface">Audit d'acquisition.</h4>
+      </div>
+      <div class="lg:col-span-5 flex flex-col justify-center">
+        <p class="text-base md:text-lg text-on-surface-variant leading-relaxed">
+          On audite ton acquisition actuelle. Coût d'opportunité chiffré. Tu réalises ce que te coûte le statu quo.
+        </p>
+      </div>
+      <div class="hidden lg:flex lg:col-span-1 items-center justify-end">
+        <span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-all duration-300">analytics</span>
+      </div>
+    </div>
+    <!-- Step 2 -->
+    <div class="group relative grid grid-cols-1 lg:grid-cols-12 py-12 md:py-16 border-t border-outline-variant/15">
+      <div class="lg:col-span-2 mb-4 lg:mb-0">
+        <span class="font-headline text-6xl md:text-8xl text-primary-container/20 group-hover:text-primary-container transition-colors duration-500 italic">02</span>
+      </div>
+      <div class="lg:col-span-4 flex flex-col justify-center mb-4 lg:mb-0">
+        <h3 class="font-label uppercase tracking-widest text-sm text-primary mb-2">L'EXTRACTION</h3>
+        <h4 class="font-headline text-2xl md:text-3xl text-on-surface">Capture de ton ADN.</h4>
+      </div>
+      <div class="lg:col-span-5 flex flex-col justify-center">
+        <p class="text-base md:text-lg text-on-surface-variant leading-relaxed">
+          1h d'interview. On capture ta voix, ton ton, tes sujets. Tu as déjà tout le matériau -- nous l'organisons.
+        </p>
+      </div>
+      <div class="hidden lg:flex lg:col-span-1 items-center justify-end">
+        <span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-all duration-300">record_voice_over</span>
+      </div>
+    </div>
+    <!-- Step 3 -->
+    <div class="group relative grid grid-cols-1 lg:grid-cols-12 py-12 md:py-16 border-t border-outline-variant/15">
+      <div class="lg:col-span-2 mb-4 lg:mb-0">
+        <span class="font-headline text-6xl md:text-8xl text-primary-container/20 group-hover:text-primary-container transition-colors duration-500 italic">03</span>
+      </div>
+      <div class="lg:col-span-4 flex flex-col justify-center mb-4 lg:mb-0">
+        <h3 class="font-label uppercase tracking-widest text-sm text-primary mb-2">LE MONTAGE</h3>
+        <h4 class="font-headline text-2xl md:text-3xl text-on-surface">Architecture IA.</h4>
+      </div>
+      <div class="lg:col-span-5 flex flex-col justify-center">
+        <p class="text-base md:text-lg text-on-surface-variant leading-relaxed">
+          Phase DFY pure. Tu ne fais rien. On build ton agent IA + workflow veille, rédaction, validation, publication.
+        </p>
+      </div>
+      <div class="hidden lg:flex lg:col-span-1 items-center justify-end">
+        <span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-all duration-300">settings_input_component</span>
+      </div>
+    </div>
+    <!-- Step 4 -->
+    <div class="group relative grid grid-cols-1 lg:grid-cols-12 py-12 md:py-16 border-t border-outline-variant/15">
+      <div class="lg:col-span-2 mb-4 lg:mb-0">
+        <span class="font-headline text-6xl md:text-8xl text-primary-container/20 group-hover:text-primary-container transition-colors duration-500 italic">04</span>
+      </div>
+      <div class="lg:col-span-4 flex flex-col justify-center mb-4 lg:mb-0">
+        <h3 class="font-label uppercase tracking-widest text-sm text-primary mb-2">LE PREMIER TOUR DE CLÉ</h3>
+        <h4 class="font-headline text-2xl md:text-3xl text-on-surface">Lancement Live.</h4>
+      </div>
+      <div class="lg:col-span-5 flex flex-col justify-center">
+        <p class="text-base md:text-lg text-on-surface-variant leading-relaxed">
+          Système live. Tu valides en 1 clic sur Telegram. Premiers résultats mesurés en temps réel.
+        </p>
+      </div>
+      <div class="hidden lg:flex lg:col-span-1 items-center justify-end">
+        <span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-all duration-300">rocket_launch</span>
+      </div>
+    </div>
+    <!-- Step 5 -->
+    <div class="group relative grid grid-cols-1 lg:grid-cols-12 py-12 md:py-16 border-t border-b border-outline-variant/15">
+      <div class="lg:col-span-2 mb-4 lg:mb-0">
+        <span class="font-headline text-6xl md:text-8xl text-primary-container/20 group-hover:text-primary-container transition-colors duration-500 italic">05</span>
+      </div>
+      <div class="lg:col-span-4 flex flex-col justify-center mb-4 lg:mb-0">
+        <h3 class="font-label uppercase tracking-widest text-sm text-primary mb-2">LE PILOTE AUTOMATIQUE</h3>
+        <h4 class="font-headline text-2xl md:text-3xl text-on-surface">Liberté retrouvée.</h4>
+      </div>
+      <div class="lg:col-span-5 flex flex-col justify-center">
+        <p class="text-base md:text-lg text-on-surface-variant leading-relaxed">
+          5 min/jour. Pipeline leads prévisible. 5-10h/semaine récupérées pour ce qui compte vraiment.
+        </p>
+      </div>
+      <div class="hidden lg:flex lg:col-span-1 items-center justify-end">
+        <span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-all duration-300">auto_mode</span>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- CTA mid-page -->
+<section class="py-24 md:py-32 px-6 md:px-8 max-w-4xl mx-auto text-center">
+  <h2 class="font-headline text-3xl md:text-5xl mb-8 leading-tight text-on-surface">
+    Prêt à déléguer ta croissance à un système infatigable ?
+  </h2>
+  <div class="flex flex-col sm:flex-row gap-4 justify-center">
+    <a href="https://tally.so/r/vG2KgA" target="_blank" rel="noopener"
+       class="bg-primary text-on-primary px-10 py-4 rounded-lg text-lg font-medium hover:opacity-90 transition-all">
+      Réserver mon Diagnostic
+    </a>
+    <a href="#approche"
+       class="bg-surface-container-highest text-on-surface px-10 py-4 rounded-lg text-lg font-medium hover:bg-surface-container-high transition-all">
+      Revoir l'approche
+    </a>
+  </div>
+  <p class="mt-8 text-sm font-label uppercase tracking-widest text-outline">Seulement 3 places disponibles ce mois-ci.</p>
+</section>
+
+<!-- ============================================ -->
+<!-- 7. QUI SUIS-JE                               -->
+<!-- ============================================ -->
+<section class="max-w-7xl mx-auto px-6 md:px-8 py-24">
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+    <!-- Photo placeholder -->
+    <div class="md:col-span-4">
+      <div class="bg-surface-container-high rounded-xl aspect-[3/4] flex items-center justify-center max-w-sm mx-auto md:max-w-none">
+        <span class="material-symbols-outlined text-6xl text-outline-variant">person</span>
+        <!-- Remplacer par : <img src="photo.jpg" alt="Ousny" class="w-full h-full object-cover rounded-xl" /> -->
+      </div>
+    </div>
+    <!-- Bio -->
+    <div class="md:col-span-8 space-y-6">
+      <span class="font-label uppercase tracking-widest text-xs text-primary font-bold block">Qui est derrière le protocole</span>
+      <h2 class="font-headline text-3xl md:text-5xl text-on-surface leading-tight">Je suis Ousny.</h2>
+      <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed">
+        J'ai construit un système d'agents IA qui gère mon contenu à ma place. Pas un side-project. Un vrai système de production qui tourne 24/7.
+      </p>
+      <p class="text-base md:text-lg text-on-surface-variant leading-relaxed">
+        Maintenant, je l'installe pour d'autres. Coachs, consultants, infopreneurs -- ceux qui ont l'expertise mais pas le temps de la transformer en contenu. Le Carl Protocol, c'est exactement ce que j'utilise moi-même, adapté à votre business.
+      </p>
+      <div class="flex items-center gap-6 pt-4">
+        <a href="https://www.threads.net/@carlprotocol" target="_blank" rel="noopener"
+           class="flex items-center gap-2 text-primary font-medium hover:opacity-80 transition-all">
+          <span class="material-symbols-outlined text-base">alternate_email</span>
+          @carlprotocol
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- 8. PRICING                                   -->
+<!-- ============================================ -->
+<section id="tarifs" class="max-w-7xl mx-auto px-6 md:px-8 py-24">
+  <!-- Header -->
+  <div class="mb-20 text-center md:text-left max-w-3xl">
+    <span class="uppercase tracking-widest text-xs font-medium text-primary mb-4 block font-bold">INVESTISSEMENT</span>
+    <h2 class="text-4xl md:text-6xl font-headline text-stone-900 leading-[1.1] mb-6">
+      Prix fixe. Scope clair.<br class="hidden md:block" /> Pas de surprise.
+    </h2>
+    <p class="text-stone-600 text-lg max-w-xl font-body leading-relaxed">
+      Une infrastructure de prospection haut de gamme, déployée en un temps record. Pas de frais mensuels cachés, juste une exécution chirurgicale.
+    </p>
+  </div>
+  <!-- Cards -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch mb-24">
+    <!-- Starter -->
+    <div class="bg-surface-container-lowest p-8 md:p-10 flex flex-col justify-between border-l-2 border-outline-variant/20">
+      <div>
+        <h3 class="text-xs uppercase tracking-[0.2em] font-medium text-stone-500 mb-8">Starter</h3>
+        <div class="flex items-baseline gap-2 mb-6">
+          <span class="text-4xl font-headline text-stone-900">1 500€</span>
+          <span class="text-stone-400 text-sm">HT</span>
+        </div>
+        <ul class="space-y-4 mb-10">
+          <li class="flex items-center gap-3 text-stone-700">
+            <span class="material-symbols-outlined text-sm text-primary">check_circle</span>
+            1 bot d'automatisation
+          </li>
+          <li class="flex items-center gap-3 text-stone-700">
+            <span class="material-symbols-outlined text-sm text-primary">check_circle</span>
+            Intégrations de base
+          </li>
+          <li class="flex items-center gap-3 text-stone-700">
+            <span class="material-symbols-outlined text-sm text-primary">check_circle</span>
+            Livraison 1 semaine
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div class="bg-surface-container-low p-4 mb-6 italic text-sm text-stone-600 font-headline">
+          "Prix lancement -- passe à 2 000€ après 5 clients"
+        </div>
+        <a href="https://tally.so/r/vG2KgA" target="_blank" rel="noopener"
+           class="block w-full py-4 bg-surface-container-highest text-stone-900 text-sm font-bold uppercase tracking-widest hover:bg-stone-200 transition-colors text-center">
+          Choisir Starter
+        </a>
+      </div>
+    </div>
+    <!-- Pro -->
+    <div class="bg-surface-container p-8 md:p-10 flex flex-col justify-between relative border-2 border-primary transform md:-translate-y-4">
+      <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-on-primary text-[10px] uppercase tracking-widest px-4 py-1.5 font-bold">
+        Le plus populaire
+      </div>
+      <div>
+        <h3 class="text-xs uppercase tracking-[0.2em] font-medium text-primary mb-8">Pro</h3>
+        <div class="flex items-baseline gap-2 mb-6">
+          <span class="text-4xl font-headline text-stone-900">2 500€</span>
+          <span class="text-stone-400 text-sm">HT</span>
+        </div>
+        <ul class="space-y-4 mb-10">
+          <li class="flex items-center gap-3 text-stone-700">
+            <span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+            2 bots d'automatisation
+          </li>
+          <li class="flex items-center gap-3 text-stone-700">
+            <span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+            Automations avancées
+          </li>
+          <li class="flex items-center gap-3 text-stone-700">
+            <span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+            Livraison 2 semaines
+          </li>
+        </ul>
+      </div>
+      <div>
+        <a href="https://tally.so/r/vG2KgA" target="_blank" rel="noopener"
+           class="block w-full py-4 bg-primary text-on-primary text-sm font-bold uppercase tracking-widest hover:opacity-90 transition-all text-center">
+          Démarrer le protocole
+        </a>
+      </div>
+    </div>
+    <!-- Custom -->
+    <div class="bg-surface-container-lowest p-8 md:p-10 flex flex-col justify-between border-l-2 border-outline-variant/20">
+      <div>
+        <h3 class="text-xs uppercase tracking-[0.2em] font-medium text-stone-500 mb-8">Custom</h3>
+        <div class="flex items-baseline gap-2 mb-6">
+          <span class="text-4xl font-headline text-stone-900">Sur devis</span>
+        </div>
+        <ul class="space-y-4 mb-10">
+          <li class="flex items-center gap-3 text-stone-700">
+            <span class="material-symbols-outlined text-sm text-primary">check_circle</span>
+            Multi-agent intelligent
+          </li>
+          <li class="flex items-center gap-3 text-stone-700">
+            <span class="material-symbols-outlined text-sm text-primary">check_circle</span>
+            Infrastructure Enterprise
+          </li>
+          <li class="flex items-center gap-3 text-stone-700">
+            <span class="material-symbols-outlined text-sm text-primary">check_circle</span>
+            Architecture sur mesure
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div class="bg-surface-container-low p-4 mb-6 italic text-sm text-stone-600 font-headline">
+          "À partir de 3 000€"
+        </div>
+        <a href="https://tally.so/r/vG2KgA" target="_blank" rel="noopener"
+           class="block w-full py-4 bg-surface-container-highest text-stone-900 text-sm font-bold uppercase tracking-widest hover:bg-stone-200 transition-colors text-center">
+          Contacter
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Bonuses -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
+    <div class="space-y-8">
+      <h2 class="text-3xl font-headline text-stone-900">Inclus dans chaque pack.</h2>
+      <div class="space-y-6">
+        <div class="flex gap-4 items-start">
+          <div class="bg-secondary-container text-on-secondary-container p-2 rounded-lg">
+            <span class="material-symbols-outlined">call</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-stone-900">Appel stratégie contenu 1h</h4>
+            <p class="text-stone-600 text-sm">Définition de votre ligne éditoriale (valeur 300€)</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="bg-secondary-container text-on-secondary-container p-2 rounded-lg">
+            <span class="material-symbols-outlined">support_agent</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-stone-900">30 jours support post-livraison</h4>
+            <p class="text-stone-600 text-sm">Ajustements et maintenance technique (valeur 500€)</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="bg-secondary-container text-on-secondary-container p-2 rounded-lg">
+            <span class="material-symbols-outlined">auto_awesome</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-stone-900">10 templates contenu adaptés</h4>
+            <p class="text-stone-600 text-sm">Spécifiques à votre niche pour vos bots (valeur 200€)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Guarantee badge -->
+    <div class="bg-surface-container-low p-12 flex flex-col items-center text-center">
+      <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+        <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">verified</span>
+      </div>
+      <h3 class="text-xl font-headline text-stone-900 mb-4">Garantie Système Actif</h3>
+      <p class="text-stone-600 font-body mb-6 italic">"Livré en 14 jours ou on bosse gratis."</p>
+      <div class="text-[10px] uppercase tracking-widest text-stone-400">Certifié Carl Protocol</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- 9. FAQ                                       -->
+<!-- ============================================ -->
+<section id="faq" class="max-w-4xl mx-auto px-6 md:px-8 py-24">
+  <div class="mb-16">
+    <span class="font-label uppercase tracking-widest text-xs text-primary font-semibold mb-4 block">Clarté & Transparence</span>
+    <h2 class="font-headline text-4xl md:text-5xl text-on-surface leading-tight tracking-tight italic">Questions fréquentes</h2>
+  </div>
+  <div class="space-y-3">
+    <!-- Q1 -->
+    <details class="group bg-surface-container-low rounded-lg transition-all duration-300 open:bg-surface-container-lowest open:shadow-[0_32px_64px_-12px_rgba(27,28,23,0.04)]" open>
+      <summary class="flex justify-between items-center p-6 md:p-8 cursor-pointer">
+        <span class="text-lg md:text-xl font-medium text-on-surface font-body pr-4">C'est quoi exactement le Carl Protocol ?</span>
+        <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary shrink-0">expand_more</span>
+      </summary>
+      <div class="px-6 md:px-8 pb-6 md:pb-8 text-on-surface-variant leading-relaxed max-w-2xl">
+        On installe un bot qui écrit et publie du contenu à ta place, dans ton style. Tu valides en 1 clic sur Telegram. C'est tout.
+      </div>
+    </details>
+    <!-- Q2 -->
+    <details class="group bg-surface-container-low rounded-lg transition-all duration-300 open:bg-surface-container-lowest open:shadow-[0_32px_64px_-12px_rgba(27,28,23,0.04)]">
+      <summary class="flex justify-between items-center p-6 md:p-8 cursor-pointer">
+        <span class="text-lg md:text-xl font-medium text-on-surface font-body pr-4">Je suis pas technique, c'est un problème ?</span>
+        <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary shrink-0">expand_more</span>
+      </summary>
+      <div class="px-6 md:px-8 pb-6 md:pb-8 text-on-surface-variant leading-relaxed max-w-2xl">
+        Non. C'est 100% done-for-you. Tu ne touches à rien de technique. On build, on installe, on te livre les clés.
+      </div>
+    </details>
+    <!-- Q3 -->
+    <details class="group bg-surface-container-low rounded-lg transition-all duration-300 open:bg-surface-container-lowest open:shadow-[0_32px_64px_-12px_rgba(27,28,23,0.04)]">
+      <summary class="flex justify-between items-center p-6 md:p-8 cursor-pointer">
+        <span class="text-lg md:text-xl font-medium text-on-surface font-body pr-4">Comment ça peut écrire dans mon ton ?</span>
+        <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary shrink-0">expand_more</span>
+      </summary>
+      <div class="px-6 md:px-8 pb-6 md:pb-8 text-on-surface-variant leading-relaxed max-w-2xl">
+        On fait une interview de 1h où on capture ta voix, tes expressions, tes sujets. Le système est calibré sur toi, pas sur un template générique.
+      </div>
+    </details>
+    <!-- Q4 -->
+    <details class="group bg-surface-container-low rounded-lg transition-all duration-300 open:bg-surface-container-lowest open:shadow-[0_32px_64px_-12px_rgba(27,28,23,0.04)]">
+      <summary class="flex justify-between items-center p-6 md:p-8 cursor-pointer">
+        <span class="text-lg md:text-xl font-medium text-on-surface font-body pr-4">C'est pas juste une formation IA de plus ?</span>
+        <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary shrink-0">expand_more</span>
+      </summary>
+      <div class="px-6 md:px-8 pb-6 md:pb-8 text-on-surface-variant leading-relaxed max-w-2xl">
+        Zéro formation. Zéro cours. Tu ne passes pas 5 semaines à apprendre. On livre un système opérationnel en 2 semaines. Tu l'utilises, point.
+      </div>
+    </details>
+    <!-- Q5 -->
+    <details class="group bg-surface-container-low rounded-lg transition-all duration-300 open:bg-surface-container-lowest open:shadow-[0_32px_64px_-12px_rgba(27,28,23,0.04)]">
+      <summary class="flex justify-between items-center p-6 md:p-8 cursor-pointer">
+        <span class="text-lg md:text-xl font-medium text-on-surface font-body pr-4">Combien de temps avant de voir des résultats ?</span>
+        <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary shrink-0">expand_more</span>
+      </summary>
+      <div class="px-6 md:px-8 pb-6 md:pb-8 text-on-surface-variant leading-relaxed max-w-2xl">
+        Le système est live en 14 jours max. Premiers contenus publiés dès la semaine 2.
+      </div>
+    </details>
+    <!-- Q6 -->
+    <details class="group bg-surface-container-low rounded-lg transition-all duration-300 open:bg-surface-container-lowest open:shadow-[0_32px_64px_-12px_rgba(27,28,23,0.04)]">
+      <summary class="flex justify-between items-center p-6 md:p-8 cursor-pointer">
+        <span class="text-lg md:text-xl font-medium text-on-surface font-body pr-4">C'est quoi la garantie ?</span>
+        <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary shrink-0">expand_more</span>
+      </summary>
+      <div class="px-6 md:px-8 pb-6 md:pb-8 text-on-surface-variant leading-relaxed max-w-2xl">
+        Garantie Système Actif : livré en 14 jours ou on bosse gratis. Pas de petites lignes.
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- 10. CTA FINAL                                -->
+<!-- ============================================ -->
+<section class="max-w-7xl mx-auto px-6 md:px-8 py-24">
+  <div class="relative overflow-hidden rounded-xl bg-surface-container py-20 md:py-24 px-8 md:px-24 flex flex-col items-center text-center">
+    <div class="relative z-10 max-w-2xl">
+      <h3 class="font-headline text-3xl md:text-5xl mb-8 leading-tight text-on-surface">
+        Prêt à déléguer ta croissance ?
+      </h3>
+      <p class="text-lg text-on-surface-variant mb-10 font-light">
+        3 places disponibles ce mois-ci. Remplis le formulaire, on te recontacte dans 24h avec une proposition personnalisée.
+      </p>
+      <a href="https://tally.so/r/vG2KgA" target="_blank" rel="noopener"
+         class="inline-block bg-primary text-on-primary px-10 py-4 rounded-lg font-medium text-lg hover:opacity-95 transition-all">
+        Candidater maintenant
+      </a>
+      <p class="mt-6 text-sm text-outline italic">Garantie Système Actif : livré en 14 jours ou on bosse gratis.</p>
+    </div>
+    <div class="absolute -bottom-20 -right-20 w-80 h-80 bg-primary-container/10 rounded-full blur-3xl"></div>
+    <div class="absolute -top-20 -left-20 w-80 h-80 bg-secondary-container/10 rounded-full blur-3xl"></div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================ -->
+<!-- 11. FOOTER                                   -->
+<!-- ============================================ -->
+<footer class="bg-surface-container-high mt-20">
+  <div class="flex flex-col md:flex-row justify-between items-center w-full px-6 md:px-8 py-12 max-w-7xl mx-auto">
+    <div class="mb-8 md:mb-0 text-center md:text-left">
+      <div class="font-headline text-lg text-stone-900 mb-2">Carl Protocol</div>
+      <p class="font-body text-sm text-stone-600">© 2026 Carl Protocol. L'art de la prospection automatisée.</p>
+      <p class="mt-2 text-xs font-label uppercase tracking-widest text-stone-500">Built by Ousny</p>
+    </div>
+    <div class="flex flex-col md:items-end gap-4">
+      <div class="flex flex-wrap justify-center gap-6">
+        <a class="font-body text-sm text-stone-600 hover:underline decoration-[#D97757] underline-offset-4 transition-all duration-200" href="#">Mentions Légales</a>
+        <a class="font-body text-sm text-stone-600 hover:underline decoration-[#D97757] underline-offset-4 transition-all duration-200" href="#">Confidentialité</a>
+        <a class="font-body text-sm text-stone-600 hover:underline decoration-[#D97757] underline-offset-4 transition-all duration-200" href="#">Contact</a>
+        <a class="font-body text-sm text-stone-900 font-medium hover:underline decoration-[#D97757] underline-offset-4 transition-all duration-200 flex items-center gap-1" href="https://www.threads.net/@carlprotocol" target="_blank" rel="noopener">
+          <span class="material-symbols-outlined text-base">alternate_email</span>
+          Threads
+        </a>
+        <a class="font-body text-sm text-stone-600 hover:underline decoration-[#D97757] underline-offset-4 transition-all duration-200" href="#">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
